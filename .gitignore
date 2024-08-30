@@ -3,3 +3,5 @@
 
 # Temporary Files
 /.jekyll-cache
+
+Gemfile.lock
