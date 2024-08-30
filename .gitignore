@@ -3,5 +3,6 @@
 
 # Temporary Files
 /.jekyll-cache
+/.sass-cache
 
 Gemfile.lock
