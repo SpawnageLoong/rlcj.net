@@ -1,3 +1,7 @@
+# Base Settings
+baseurl: "http://spawnageloong.github.io"
+url: "/rlcj.net/"
+
 collections:
   authors:
     output: true
