@@ -1,11 +1,48 @@
-# Base Settings
+# URL Settings
 url: "http://spawnageloong.github.io"
 baseurl: "/rlcj.net"
 
+# Home/blog
+blog:
+  title: rlcj
+  description: A blog
+
+  # Layout
+  logo_path              : "assets/images/logo.svg"
+  search_path            :
+  enable_hero_layout     : true
+  hero_placeholder       :
+  enable_excerpts        : true
+  enable_inline_footnotes: true
+  titles_only            : false
+
+  # Fonts
+  font              : '"Rubik", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif'
+  load_google_fonts : 'Rubik:400,400italic,700,700italic'
+
+# Author info
+author:
+  full_name        : Richard Loong
+  rss              : true
+  mail             : richardloongcj@gmail.com
+  twitter          :
+  github           :
+  youtube          :
+  stackoverflow    :
+  disqus           :
+  google_analytics : # 'UA-XXXXXXXX-X'
+  photo            : # "uploads/me2.png"
+  photo2x          : # "uploads/me.png"
+
+# Collections
 collections:
   projects:
     output: true
+    permalink: /projects/:slug
 
+permalink: posts/:slug
+
+# Defaults
 defaults:
   - scope:
       path: ""
