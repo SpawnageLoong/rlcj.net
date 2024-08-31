@@ -3,15 +3,15 @@ url: "http://spawnageloong.github.io"
 baseurl: "/rlcj.net"
 
 collections:
-  authors:
+  projects:
     output: true
 
 defaults:
   - scope:
       path: ""
-      type: "authors"
+      type: "projects"
     values:
-      layout: "author"
+      layout: "project"
   - scope:
       path: ""
       type: "posts"

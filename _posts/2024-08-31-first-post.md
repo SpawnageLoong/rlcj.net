@@ -1,6 +1,7 @@
 ---
 layout: post
 author: richard
+project: project-1
 ---
 
 This is a first blog post, made for a tutorial on Jekyll.
