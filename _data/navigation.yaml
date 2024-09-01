@@ -1,6 +1,6 @@
-- name: About
+- name: about
   link: /about.html
-- name: Projects
+- name: projects
   link: /projects.html
-- name: Archive
+- name: archive
   link: /archive.html
