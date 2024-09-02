@@ -97,8 +97,8 @@ Object.entries = (object) => Object.keys(object).map(
   
   // initiate
   
-  // set inital theme to light
-  updateTheme(LightTheme);
+  // set inital theme to night
+  updateTheme(NightTheme);
   checkForSavedTheme();
   
   const el = document.getElementById('theme-switcher');
