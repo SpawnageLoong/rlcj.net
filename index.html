@@ -5,3 +5,10 @@ title: Home | rlcj.net
 
 <h1>{{"Hello World!" | downcase}}</h1>
 
+{% for post in paginator.posts %}
+
+{% include blog.html %}
+
+{% endfor %}
+
+{% include pagination.html %}
