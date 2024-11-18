@@ -33,6 +33,13 @@
           </a>
       </li>
       {% endif %}
+      {% if site.author.bluesky %}
+      <li>
+          <a href="https://bsky.app/profile/{{ site.author.bluesky }}" target="_blank" class="smaller">
+            <span class="simple-icons--bluesky"></span>
+          </a>
+      </li>
+      {% endif %}
       {% if site.author.github %}
       <li>
           <a href="https://github.com/{{ site.author.github }}" target="_blank" class="smaller">

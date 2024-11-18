@@ -35,6 +35,7 @@ author:
   rss                       : true # generate RSS feed and show it's icon in header
   mail                      : richard@rlcj.net # change to your e-mail address
   twitter                   : 
+  bluesky                   : 'shizuka-shinano.bsky.social'
   github                    : SpawnageLoong
   youtube                   : '@ShizukaShinano'
   linkedin                  : richardloongcj
