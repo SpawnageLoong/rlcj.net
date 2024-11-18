@@ -16,8 +16,13 @@ permalink: /about/
     </div>
   </div>
 
-## Some heading 
+## "Nothing is more permanent than a temporary solution."
 
-I'll alert the crew. Sure. You'd be surprised how far a hug goes with Geordi, or Worf. Did you come here for something in particular or just general Riker-bashing? You did exactly what you had to do. You considered all your options, you tried every alternative and then you made the hard choice. Your shields were failing, sir. Well, that's certainly good to know. A surprise party? Mr. Worf, I hate surprise parties. I would *never* do that to you. And blowing into maximum warp speed, you appeared for an instant to be in two places at once. How long can two people talk about nothing? I recommend you don't fire until you're within 40,000 kilometers. Congratulations - you just destroyed the Enterprise. Worf, It's better than music. It's jazz. Yes, absolutely, I do indeed concur, wholeheartedly! What's a knock-out like you doing in a computer-generated gin joint like this? I can't. As much as I care about you, my first duty is to the ship. Some days you get the bear, and some days the bear gets you.
+<br>
+I am a pretty lazy person. I believe that the best things in life, are those that require the least effort to use. That, and really cool stuff that make my monkey brain go "Oooh, shiny!". These two things can basically sum up my entire project portfolio.
+
+This blog is a collection of my thoughts, projects, and other random stuff that comes to mind.
+
+And if you're worndering what's with the quote, it was a placeholder that describes itself so well that I'm not going to change it.
 
 </div>
