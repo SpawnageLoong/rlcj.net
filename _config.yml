@@ -8,7 +8,7 @@ url                          : "" # the base hostname & protocol for your site
 blog:
   title                       : rlcj
   description                 : >
-                               this should contain a proper description
+                               A personal blog
 
   ## !!
   ## Untested blog settings
@@ -31,14 +31,14 @@ blog:
 
 # Author info
 author:
-  fullname                  : Your Name
+  fullname                  : Richard Loong
   rss                       : true # generate RSS feed and show it's icon in header
-  mail                      : your@email.com # change to your e-mail address
-  twitter                   : twitter-user-name
-  github                    : github-user-name
-  youtube                   : youtube-user-name
-  linkedin                  : linkedin-user-name
-  photo                     : /assets/images/me.png
+  mail                      : richard@rlcj.net # change to your e-mail address
+  twitter                   : 
+  github                    : SpawnageLoong
+  youtube                   : '@ShizukaShinano'
+  linkedin                  : richardloongcj
+  photo                     : /assets/images/me.jpg
 
 ## !!
 ## Advanced blog settings
