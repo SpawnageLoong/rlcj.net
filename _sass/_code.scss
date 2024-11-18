@@ -1,0 +1,156 @@
+// Code
+//-------------------------------
+// Inline and block-level code snippets. Includes tweaks to syntax highlighted
+// snippets from Rouge and Gist embeds.
+
+@use "variables";
+@use "theme";
+@use "mixins";
+
+code,
+pre {
+  font-family: variables.$serif;
+}
+
+// small code thingies
+code {
+  padding: .25em .5em;
+  font-size: .85em;
+  // Could be mistaken for a link if the user choses a similar link-color, so better no colored inline code.
+  // color: $code-color;
+  background-color: theme.$code-bg-color;
+  border-radius: 0.3em;
+}
+
+code.highlighter-rouge {
+  box-shadow: 0 1px 1px theme.$shadow-color;
+}
+
+pre code {
+  padding: 0;
+  font-size: 1em;
+  color: inherit;
+  background-color: transparent;
+}
+
+figure, .figure {
+  margin-left: -1rem;
+  margin-right: -1rem;
+
+  > *:first-child {
+    padding: 1rem;
+    background: theme.$code-bg-color;
+  }
+
+  > figcaption, > .figcaption {
+    font-size: smaller;
+    color: #9a9a9a;
+    text-align: center;
+    font-style: italic;
+    margin-top: 0.5rem;
+    padding: 0 1rem;
+  }
+}
+
+//http://www.minh.io/blog/2015/06/28/jekyll-line-numbers/
+//https://drewsilcock.co.uk/proper-linenumbers
+//https://sacha.me/articles/jekyll-rouge/#using-rouge-in-jekyll-3-on-github-pages
+// Rouge
+.highlight {
+  margin-bottom: 1.5rem;
+  font-size: .75em;
+  // /* Prevent code linebreaks and allow side-scrolling (much better readability on mobile) */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  // /* Make code same width as regular text, and scroll the full page width on mobile */
+  @include mixins.figure2();
+
+  backface-visibility: hidden;
+  // box-shadow: 0 1px 2px theme.$shadow-color;
+  filter: drop-shadow(-0.25em 0.375em 3px theme.$shadow-color);
+  border-radius: 0.3em;
+  position: relative;
+  
+  &:before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0.5em;
+        background-color: theme.$code-border;
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1.2em' height='1.2em' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath stroke-dasharray='64' stroke-dashoffset='64' d='M13 3l6 6v12h-14v-18h8'%3E%3Canimate fill='freeze' attributeName='stroke-dashoffset' dur='0.6s' values='64;0'/%3E%3C/path%3E%3Cpath stroke-dasharray='14' stroke-dashoffset='14' stroke-width='1' d='M12.5 3v5.5h6.5'%3E%3Canimate fill='freeze' attributeName='stroke-dashoffset' begin='0.7s' dur='0.2s' values='14;0'/%3E%3C/path%3E%3Cpath stroke-dasharray='8' stroke-dashoffset='8' d='M10 13l-2 2l2 2'%3E%3Canimate fill='freeze' attributeName='stroke-dashoffset' begin='0.9s' dur='0.2s' values='8;0'/%3E%3C/path%3E%3Cpath stroke-dasharray='8' stroke-dashoffset='8' d='M14 13l2 2l-2 2'%3E%3Canimate fill='freeze' attributeName='stroke-dashoffset' begin='1.1s' dur='0.2s' values='8;0'/%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+        line-height: 1;
+        box-shadow: 0 2px 2px theme.$shadow-color;
+      }
+
+  pre {
+    line-height: 1.6;
+    margin-bottom: 0;
+    overflow-x: auto;
+  }
+
+  .lineno {
+    display: inline-block; // Ensures the null space also isn't selectable
+    padding-right: .25rem;
+    color: theme.$metadata-color;
+    // Make sure numbers aren't selectable
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+  }
+
+  table {
+    // resets down below
+    width: 90%;
+    background: transparent;
+    box-shadow: none;
+    margin-bottom: 0;
+    font-size: inherit;
+
+    td, th {
+    padding: 0.25rem .5rem;
+    }
+
+    td:not(:first-child) {
+    border-left: 0;
+    }
+
+    td.gutter {
+      background: theme.$code-border;
+      box-shadow: 0 1px 2px theme.$shadow-color;
+      width: 6%;
+    }
+
+    td.code {
+      position:relative;
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 48rem) {
+  td.code:before {
+    display: none;
+  }
+}
+
+// Gist via GitHub Pages
+// .gist .gist-file {
+//   font-family: Menlo, Monaco, "Courier New", monospace !important;
+// }
+// .gist .markdown-body {
+//   padding: 15px;
+// }
+// .gist pre {
+//   padding: 0;
+//   background-color: transparent;
+// }
+// .gist .gist-file .gist-data {
+//   font-size: .8rem !important;
+//   line-height: 1.4;
+// }
+// .gist code {
+//   padding: 0;
+//   color: inherit;
+//   background-color: transparent;
+//   border-radius: 0;
+// }

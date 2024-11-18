@@ -1,0 +1,143 @@
+// Base
+// Adapted from dactl by melangue
+//-------------------------------
+
+@use 'variables';
+@use 'theme';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+::selection {
+  color: theme.$bg-color;
+  background-color: theme.$text-color;
+}
+
+body {
+    font-size: variables.$base-font-size;
+    line-height: variables.$base-line-height;
+    color: theme.$text-color;
+    background-color: theme.$bg-color;
+}
+
+.page {
+      margin-bottom: 8em;
+      }
+.wrapper {
+    max-width: 48rem;
+    margin: 4rem auto 4rem auto;
+}
+
+
+@media (max-width: 48rem) {
+    body {
+      font-size: variables.$mobile-font-size;
+    }
+    .wrapper {
+      width: 90%;
+      margin: 3rem auto 2rem auto;
+    }
+}
+
+// Links and paragraphs
+//-------------------------------
+
+a, .a {
+  color: theme.$link-color;
+  text-decoration: none;
+  position: relative;
+  border-bottom: 0.18rem solid transparent;
+  transition: border 0.15s;
+
+    &:hover, &:focus {
+      text-decoration: none;
+      border-bottom: 0.15em solid;
+    }
+    strong {
+      color: inherit;
+    }
+}
+
+// Headings
+//-------------------------------
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: .5rem;
+  font-weight: variables.$base-font-weight-bold;
+  line-height: 1.1;
+  color: theme.$text-color;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  margin-top: 2.5rem;
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+}
+
+h4, h5, h6 {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+b,
+strong {
+  color: theme.$text-color;
+}
+
+dt {
+  font-weight: variables.$base-font-weight-bold;
+}
+
+dd {
+  margin-bottom: .5rem;
+}
+
+abbr {
+  font-size: 85%;
+  font-weight: variables.$base-font-weight-bold;
+  color: theme.$text-color;
+  text-transform: uppercase;
+
+  &[title] {
+    cursor: help;
+    border-bottom: 1px dotted theme.$text-color-light;
+  }
+}
+
+strong {
+    color: theme.$text-color;
+}
+
+// Lists, blockquotes
+//-------------------------------
+
+ul, ol, dl {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+// HR, IMG
+//-------------------------------
+
+hr {
+  margin-bottom: 4em;
+  max-width: 30%;
+  border: 0.1em solid theme.$shadow-color;
+}
+
+img {
+    margin: 2.5rem auto;
+    display: block;
+    max-width: 100%;
+}
