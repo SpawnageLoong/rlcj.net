@@ -1,0 +1,22 @@
+---
+layout : post
+date   : DATE
+title  : PROJECT-TITLE
+tags   :
+  - project
+  - PROJECT-TAG
+hero   : PROJECT-HERO
+overlay: COLOUR
+---
+
+{{ content }}
+
+<ul>
+  {% for post in site.tags.PROJECT-TAG %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      <span>{{ post.date | date: "%d %b %Y" }}</span>
+      
+    </li>
+  {% endfor %}
+</ul>
