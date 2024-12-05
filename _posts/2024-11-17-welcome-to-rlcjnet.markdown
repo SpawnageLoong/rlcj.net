@@ -8,7 +8,7 @@ hero: "/uploads/generic-hero-images/cool-cat.jpg"
 overlay: "blue"
 ---
 
-Welcome to rlcj! This is a placeholder post for now. I'll' update this post with more information about the website and how it's been modified from the template soon.
+Welcome to rlcj! This is a placeholder post for now. I'll update this post with more information about the website and how it's been modified from the template soon.
 
 {: .lead}
 
