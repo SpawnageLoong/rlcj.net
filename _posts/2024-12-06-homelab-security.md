@@ -100,10 +100,23 @@ Again, setup the local DNS records in PiHole and again, nslookup isn't working. 
 
 Back to the video, Tim goes on with using Traefik for workloads outside of docker, but I'm skipping that for now since I plan on keeping everything in docker. I'll probably come back to this later, but for now I'm happy with what I have.
 
-I'm going to leave it here for now. I know I was talking about setting up security and remote access and whatnot, but this post is getting a bit long.
+## Back to Cloudflare Tunnels
+
+Now, let's try setting up Cloudflare Tunnels again. I went back to the cloudflare dashboard, updated the tunnel to point to the nginx service, and it still doesn't work. I opened up the logs for cloudflared, and I noticed these errors:
+
+`ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp: lookup nginx-hello.local.rlcj.net on 192.168.1.1:53: no such host" connIndex=2 event=1 ingressRule=1 originService=https://nginx-hello.local.rlcj.net`
+
+It seems to be using the DNS server at `192.168.1.1` which is my home router, rather than my PiHole. I tried to fix this by changing the DNS settings in `/etc/systemd/resolved.conf` to point to the PiHole, but that didn't work. 
+
+Using `cat /etc/resolv.conf` showed that the home router was still showing up as a nameserver. After fiddling around a lot, I found a [post][cf-post] in the cloudflare community that said Docker uses the same DNS as the host machine, but my docker instance hadn't been restart since I changed the DNS settings. I restarted my whole homelab machine and it still doesn't work. But at least the logs show that it's using `8.8.8.8` as the DNS server instead of the home router, so at least something has changed.
+
+Except I never used `8.8.8.8` as any of my fallback DNS servers and I don't know where it's getting that from. `8.8.8.8` doesn't show up in `/etc/resolv.conf`, so I'm at a loss here.
+
+I decided to pause here because it feels like I'm going nowhere. I have an idea to move all of my existing services to use traefik, then put cloudflred inside the proxy network and see if that works. But that's a problem for another day.
 
 <hr>
 
 [cf-tunnel-docs]: https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/
 [technotim-traefik-video]: https://www.youtube.com/watch?v=Vc9m6g6YpFc
 [reddit-reply]: https://www.reddit.com/r/selfhosted/comments/133rr6n/comment/jieshxj/
+[cf-post]: https://community.cloudflare.com/t/cloudflare-tunnel-not-using-local-dns-for-resolution/600141
