@@ -9,11 +9,18 @@ hero: /uploads/2024-12-05-homelab1/homelab-hero.jpg
 overlay: green
 ---
 
-A home server being set up to host varios services, including a website, file sharing, and more.
+A home server being set up to host various services, including a website, file sharing, and more.
 
 {: .lead}
 
-This is placeholder text for now. The homelab is still being set up and I'm still figuring out what services I want to run on it. I'll be documenting the process here, so stay tuned!
+Services include:
+
+- PiHole for network-wide ad blocking and local DNS
+- Traefik for reverse proxy
+- Portainer for managing Docker containers
+- Homepage for dashboards, both internal and external
+- Nextcloud for file sharing and syncing
+- Vaultwarden for password management
 
 Project posts:
 <ul>
