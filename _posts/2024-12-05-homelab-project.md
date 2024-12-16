@@ -21,6 +21,7 @@ Services include:
 - Homepage for dashboards, both internal and external
 - Nextcloud for file sharing and syncing
 - Vaultwarden for password management
+- Jellyfin for media streaming
 
 Project posts:
 <ul>
