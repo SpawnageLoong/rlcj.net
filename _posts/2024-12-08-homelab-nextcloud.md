@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2024-12-08 12:00:00 +0800
-title: 'Setting up Nexcloud on my Homelab'
+title: 'Setting up Nextcloud on my Homelab'
 tags:
   - homelab
   - nextcloud
