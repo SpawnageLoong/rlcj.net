@@ -8,7 +8,7 @@ hero: /uploads/2025-02-15-homelab-migration-physical/hero.jpg
 overlay: green
 ---
 
-Over the past few weeks, I've been receiving the various parts that I ordered for my DIY 10-inch rack. As I mentioned in my [last post](/2025/02/02/homelab-plans), I was planning on moving my homelab into a rack, and I've finally gotten around to doing it.
+Over the past few weeks, I've been receiving the various parts that I ordered for my DIY 10-inch rack. As I mentioned in my [last post](/posts/2025-02-02-homelab-plans), I was planning on moving my homelab into a rack, and I've finally gotten around to doing it.
 
 All of the CAD files for the rack can be viewed on [Onshape][onshape-link]. Feel free to make a copy and modify it to suit your needs.
 {: .notice}
