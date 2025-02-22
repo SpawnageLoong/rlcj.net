@@ -4,7 +4,7 @@ date: 2025-02-15 12:00:00 +0800
 title: 'Migrating the homelab: Software (Part 1)'
 tags:
   - homelab
-hero: /uploads/2025-02-15-homelab-migration-software-pt1/hero.jpg
+hero: /uploads/2025-02-15-homelab-migration-software-pt1/hero.png
 overlay: purple
 ---
 
